@@ -55,14 +55,14 @@
                     
                     <div id="deslocamento">
                         <label for="deslocamento" class="Merriweather-marrom">Deslocamento:</label>
-                        <input type="number" min="1" id="deslocamento" name="deslocamento" value="deslocamento"><br>
+                        <input id="incremento" type="number" min="1" name="deslocamento" value="deslocamento"><br>
                     </div>
 
                     <div>
                         <label for="mensagem" class="Merriweather-marrom">Sua mensagem:</label><br>
-                        <textarea id="mensagemAntes" name="mensagem" rows="10" cols="60"></textarea>
+                        <textarea id="mensagemRecebida" name="mensagem" rows="10" cols="60"></textarea>
                         <p class="Merriweather-marrom">→</p>
-                        <textarea id="mensagemDepois" name="mensagem" rows="10" cols="60"></textarea>
+                        <textarea id="mensagemDevolvida" name="mensagem" rows="10" cols="60" readonly></textarea>
                     </div>
 
                     <button id="submit" class="Merriweather-marrom">Codificar/Decodificar</button>

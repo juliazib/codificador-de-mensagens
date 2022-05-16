@@ -9,7 +9,7 @@ body {
 }
 
 main {
-   margin: 5%; 
+   margin: 3%; 
 }
 
 a {
@@ -38,7 +38,7 @@ a {
 }
 
 .marrom-transparente {
-    background-color: rgba(108, 82, 46, 0.25)
+    background-color: #dab591;
 }
 
 .fixo {
@@ -86,4 +86,7 @@ fieldset {
 
 h1 {
     margin-bottom: 2%;
+    font-size: 27px;
 }
+
+

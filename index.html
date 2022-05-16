@@ -7,6 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+        <script src="script.js" defer></script>
         <link rel="stylesheet" href="styles.css">
         <title>Codificador de Mensagens</title>
     </head>
@@ -21,10 +22,10 @@
 
             <ul class="navbar flex row">
                 <li>
-                    <a href="#home" class="Merriweather-marrom">codifique</a>
+                    <a href="#home" class="Merriweather-marrom">Codifique</a>
                 </li>
                 <li class="Merriweather-marrom">
-                    <a href="#contato" class="Merriweather-marrom">contato</a>
+                    <a href="#contato" class="Merriweather-marrom">Contato</a>
                 </li>
             </ul>
 
@@ -33,26 +34,26 @@
         <main class="flex column">
 
             <h1 class="Merriweather-marrom">
-                Comece por aqui
+                A comunicação segura está a apenas um clique.
             </h1>
 
             <form>
                 <fieldset class="flex column">
-                    <div>
-                        <input type="radio" id="codificar" name="codificar" value="codificar">
+                    <div id="radioBtn">
+                        <input id="codificar" type="radio" name="codificar" value="codificar">
                         <label for="codificar" class="Merriweather-marrom">Codificar</label>
-                        <input type="radio" id="decodificar" name="codificar" value="decodificar">
+                        <input id="decodificar" type="radio" name="codificar" value="decodificar">
                         <label for="decodificar" class="Merriweather-marrom">Decodificar</label><br>
                     </div>
 
                     <div>
-                        <select name="metodo" id="metodo" class="Merriweather-marrom">
-                            <option value="cifraCesar" class="Merriweather-marrom">Cifra de César</option>
-                            <option value="base64" class="Merriweather-marrom">Base64</option>
+                        <select name="metodo" id="metodo" class="Merriweather-marrom" onclick="selecao()">
+                            <option id="cifraCesar" value="cifraCesar" class="Merriweather-marrom">Cifra de César</option>
+                            <option id="base64" value="base64" class="Merriweather-marrom">Base64</option>
                         </select><br>
                     </div>
                     
-                    <div>
+                    <div id="deslocamento">
                         <label for="deslocamento" class="Merriweather-marrom">Deslocamento:</label>
                         <input type="number" min="1" id="deslocamento" name="deslocamento" value="deslocamento"><br>
                     </div>
@@ -64,7 +65,7 @@
                         <textarea id="mensagemDepois" name="mensagem" rows="10" cols="60"></textarea>
                     </div>
 
-                    <input type="submit" value="Enviar" class="Merriweather-marrom">
+                    <button id="submit" class="Merriweather-marrom">Codificar/Decodificar</button>
                 </fieldset>
                 
             </form>

@@ -5,15 +5,15 @@
 }
 
 body {
-    background-color: #ffe0b1;
-}
-
-main {
-   margin: 3%; 
+    background-color: #231F20;
 }
 
 a {
     text-decoration: none;
+}
+
+#saiba-mais {
+    margin-bottom: 1%;
 }
 
 .flex {
@@ -32,14 +32,15 @@ a {
     justify-content: start;
 }
 
+.justify-center {
+    justify-content: center;
+}
+
 
 .align-center {
     align-items: center;
 }
 
-.marrom-transparente {
-    background-color: #dab591;
-}
 
 .fixo {
     position: sticky;
@@ -66,30 +67,104 @@ nav figure {
     font-weight: 800;
 }
 
-.navbar li a:hover {
-    color: #4B3A21;
-    font-weight: 1000px;
-}
 
 .justify-space-between {
     justify-content: space-between;
 }
 
-.Merriweather-marrom {
-    font-family: 'Merriweather', serif;
-    color: #6C522E;
+.buttons {
+    margin-left: 1%;
+    margin-right: 1%;
 }
+
+select {
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    padding: 1%;
+}
+
+option {
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    padding: 1%;
+}
+
+
 
 fieldset {
     border: none;
 }
 
 h1 {
+    margin-top: 1%;
+    color: #E1D9D1;
     margin-bottom: 2%;
+    font-family: 'Roboto', sans-serif;
     font-size: 27px;
+}
+
+label {
+    color: #E1D9D1;
+    font-family: 'Roboto', sans-serif;
+}
+
+input {
+    border-radius: 5px;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    padding: 1%;
+    width: 50px;
+    margin-top: 10px;
 }
 
 textarea {
     resize: none;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
 }
 
+.section {
+    margin: 2% 0 2% 0;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    color: #E1D9D1;
+}
+
+select {
+    font-family: 'Roboto', sans-serif;
+}
+
+#submit {
+    border-radius: 8px;
+    width: 200px;
+    padding:2%;
+    border: none;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    transition: 0.5s;
+    background-color: #E1D9D1;
+}
+
+#submit:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+footer {
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+}
+
+footer p {
+    margin-bottom: 1%;
+}
+
+figure a {
+    margin-left: 5%;
+    margin-right: 5%;
+}

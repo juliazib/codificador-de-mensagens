@@ -45,11 +45,59 @@ function base64() {
     
 }
 
+//Codifica e decodifica mensagens em cifra de césar
 function cifraDeCesar() {
-    let mensagem = document.getElementById("mensagemAntes").value
+    let mensagem = document.getElementById("mensagemRecebida").value
     let incremento = document.getElementById("incremento").value
     let mensagemCodificada = ""
     let mensagemDecodificada = ""
+
+    if (codificar.checked) {
+        for (let i = 0; i < mensagem.length; i++) {
+            let letraAscii = mensagem[i].charCodeAt()
+            if (letraAscii >= 65 && letraAscii <= 90) {
+                let novaLetra = letraAscii + parseInt(incremento)
+                if (novaLetra > 90) {
+                    novaLetra = novaLetra - 26
+                }
+                mensagemCodificada += String.fromCharCode(novaLetra)
+            }
+            else if (letraAscii >= 97 && letraAscii <= 122) {
+                let novaLetra = letraAscii + parseInt(incremento)
+                if (novaLetra > 122) {
+                    novaLetra = novaLetra - 26
+                }
+                mensagemCodificada += String.fromCharCode(novaLetra)
+            } 
+            else {
+                mensagemCodificada += mensagem[i]
+            }
+        }
+        return mensagemCodificada
+
+    } else if (decodificar.checked) {
+        for (let i = 0; i < mensagem.length; i++) {
+            let letraAscii = mensagem[i].charCodeAt()
+            if (letraAscii >= 65 && letraAscii <= 90) {
+                let novaLetra = letraAscii - parseInt(incremento)
+                if (novaLetra < 65) {
+                    novaLetra = novaLetra + 26
+                }
+                mensagemDecodificada += String.fromCharCode(novaLetra)
+            }
+            else if (letraAscii >= 97 && letraAscii <= 122) {
+                let novaLetra = letraAscii - parseInt(incremento)
+                if (novaLetra < 97) {
+                    novaLetra = novaLetra +26
+                }
+                mensagemDecodificada += String.fromCharCode(novaLetra)
+            } 
+            else {
+                mensagemDecodificada += mensagem[i]
+            }
+        }
+        return mensagemDecodificada
+    }
 }
 
 codificarDecodificar.addEventListener("click", function(event) {

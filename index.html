@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <script src="script.js" defer></script>
         <link rel="stylesheet" href="styles.css">
         <title>Codificador de Mensagens</title>
@@ -14,75 +14,66 @@
     <body>
         <a name="home"></a>
 
-        <nav class="flex row justify-start align-center marrom-transparente fixo">
+        <main class="flex column justify-center align-center">
 
-            <figure>
-                <img src="assets/caesar-logo.png" alt="Logo com a imagem de César." height="95" width="95">
-            </figure>
-
-            <ul class="navbar flex row">
-                <li>
-                    <a href="#home" class="Merriweather-marrom">Codifique</a>
-                </li>
-                <li class="Merriweather-marrom">
-                    <a href="#contato" class="Merriweather-marrom">Contato</a>
-                </li>
-            </ul>
-
-        </nav>
-
-        <main class="flex column">
-
-            <h1 class="Merriweather-marrom">
-                A comunicação segura está a apenas um clique.
+            <h1>
+                Codificador virtual
             </h1>
+
+            <p id="saiba-mais">Saiba mais sobre os métodos de codificação utilizados.</p>
 
             <form>
                 <fieldset class="flex column">
-                    <div id="radioBtn">
-                        <input id="codificar" type="radio" name="codificar" value="codificar">
-                        <label for="codificar" class="Merriweather-marrom">Codificar</label>
-                        <input id="decodificar" type="radio" name="codificar" value="decodificar">
-                        <label for="decodificar" class="Merriweather-marrom">Decodificar</label><br>
+                    <div id="radioBtn" class="section flex row justify-center">
+                        <div class="buttons">
+                            <input id="codificar" type="radio" name="codificar" value="codificar">
+                            <label for="codificar" class="">Codificar</label>
+                        </div>
+                        <div class="buttons">
+                            <input id="decodificar" type="radio" name="codificar" value="decodificar">
+                            <label for="decodificar" class="">Decodificar</label><br>
+                        </div>
                     </div>
 
-                    <div>
-                        <select name="metodo" id="metodo" class="Merriweather-marrom" onclick="selecao()">
-                            <option id="cifraCesar" value="cifraCesar" class="Merriweather-marrom">Cifra de César</option>
-                            <option id="base64" value="base64" class="Merriweather-marrom">Base64</option>
+                    <div class="section">
+                        <select name="metodo" id="metodo" class="" onclick="selecao()">
+                            <option id="cifraCesar" value="cifraCesar" class="">Cifra de César</option>
+                            <option id="base64" value="base64" class="">Base64</option>
                         </select><br>
                     </div>
                     
-                    <div id="deslocamento">
-                        <label for="deslocamento" class="Merriweather-marrom">Deslocamento:</label>
-                        <input id="incremento" type="number" min="1" name="deslocamento" value="deslocamento"><br>
+                    <div id="deslocamento" class="section">
+                        <label for="deslocamento" class="">Deslocamento:</label><br>
+                        <input id="incremento" type="number" min="1" max="25" name="deslocamento" value="deslocamento">
                     </div>
 
-                    <div>
-                        <label for="mensagem" class="Merriweather-marrom">Sua mensagem:</label><br>
-                        <textarea id="mensagemRecebida" name="mensagem" rows="10" cols="60"></textarea>
-                        <p class="Merriweather-marrom">→</p>
+                    <div class="section flex column justify-space-between">
+                        <label for="mensagem" class="">Sua mensagem:</label><br>
+                        <textarea id="mensagemRecebida" name="mensagem" rows="10" cols="60"></textarea><br>
                         <textarea id="mensagemDevolvida" name="mensagem" rows="10" cols="60" readonly></textarea>
                     </div>
 
-                    <button id="submit" class="Merriweather-marrom">Codificar/Decodificar</button>
+                    <div class="flex row justify-center">
+                        <button id="submit" class="section">Codificar/decodificar</button>
+                    </div>
+                    
                 </fieldset>
                 
             </form>
 
         </main>
 
-        <footer>
+        <footer class="flex column align-center">
             <a name="contato"></a>
 
             <p class="Merriweather-marrom">Julia Zibordi | Resilia - T19</p>
 
-            <figure>
+            <figure class="flex row justify-center">
                 <a href="https://www.linkedin.com/in/julia-zibordi/" target="_blank">
-                    <img src="assets/linkedin-icon.png" alt="ícone do Linkedin" width="30" height="30">
+                    <img src="assets/linkedin-branco-removebg-preview.png" alt="ícone do Linkedin" width="30" height="30">
                 </a>
                 <a href="https://github.com/juliazib" target="_blank">
-                    <img src="assets/github-icon.png" alt="ícone do GitHub" width="30" height="30">
+                    <img src="assets/github-branco-removebg-preview.png" alt="ícone do GitHub" width="30" height="30">
                 </a>
                 
             </figure>

@@ -137,7 +137,7 @@ select {
     font-family: 'Roboto', sans-serif;
 }
 
-#submit {
+.button-submit {
     border-radius: 8px;
     width: 200px;
     padding:2%;
@@ -148,7 +148,7 @@ select {
     background-color: #E1D9D1;
 }
 
-#submit:hover {
+.button-submit:hover {
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);
@@ -175,4 +175,30 @@ figure img {
 
 a {
     color: #CBC3E3;
+}
+
+.light-mode {
+    background-color: #E1D9D1;
+    color:#231F20;
+}
+
+.light-mode-a {
+    color: purple;
+}
+
+.light-mode-buttons {
+    background-color:#231F20;
+    color:#E1D9D1;
+}
+
+.buttonlightdark {
+    width: 80px;
+    margin-top: 1%;
+    padding: 1%;
+    border-radius: 8px;
+    border: none;
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    background-color:purple;
+    cursor: pointer;
 }

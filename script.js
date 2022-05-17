@@ -31,7 +31,7 @@ radioButton.addEventListener("click", function() {
 })
 
 
-// Codifica e decodifica mensagems em base64
+// Codifica e decodifica mensagens em base64
 function base64() {
     let mensagem = document.getElementById("mensagemRecebida").value
     if (codificar.checked) {
@@ -111,4 +111,34 @@ codificarDecodificar.addEventListener("click", function(event) {
         mensagemDevolvida.innerHTML = base64()
     }
 })
+
+// Light/dark mode
+
+function toggleLight() {
+    let body = document.body
+    let label = Array.from(document.querySelectorAll("label"))
+    body.classList.toggle("light-mode")
+    for (let i = 0; i< label.length; i++) {
+        label[i].classList.toggle("light-mode")
+    } //Até aqui está funcionando
+
+    let textos = Array.from(document.querySelectorAll("p"))
+    for (let a = 0; a < textos.length; a++) {
+        textos[a].classList.toggle("light-mode")
+    }
+
+    let titulo = document.getElementById("titulo")
+    titulo.classList.toggle("light-mode")
+
+    let links = Array.from(document.querySelectorAll("a"))
+    for (let b = 0; b < links.length; b++) {
+        links[b].classList.toggle("light-mode-a")
+    }
+
+    let buttons = Array.from(document.querySelectorAll("button"))
+    console.log(buttons)
+    for (let c = 0; c < buttons.length; c++) {
+        buttons[c].classList.toggle("light-mode-buttons")
+    }
+}
 

@@ -168,3 +168,11 @@ figure a {
     margin-left: 5%;
     margin-right: 5%;
 }
+
+figure img {
+    cursor: pointer;
+}
+
+a {
+    color: #CBC3E3;
+}
